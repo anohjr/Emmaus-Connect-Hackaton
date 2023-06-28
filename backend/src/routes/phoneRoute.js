@@ -1,9 +1,15 @@
 const router = require("express").Router();
 
-const { getAllPhone, getPhone, addUser, deletePhone, editPhone } = require("../controller/phoneController.js");
+const {
+  getAllPhone,
+  getPhone,
+  addPhone,
+  deletePhone,
+  editPhone,
+} = require("../controllers/phoneController");
 
 router.get("/", getAllPhone);
-router.post("/", validateUserPost, addUser);
+router.post("/", addPhone);
 router.get("/:id", getPhone);
 router.delete("/:id", deletePhone);
 router.put("/:id", editPhone);
