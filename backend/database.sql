@@ -22,11 +22,12 @@ USE `emmaus` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `emmaus`.`user` (
   `id` INT NOT NULL,
-  `role` VARCHAR(45) NULL,
+  `role` TINYINT NULL,
   `firstname` VARCHAR(45) NULL,
   `lastname` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
   `location` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
